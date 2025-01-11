@@ -1,5 +1,4 @@
 // JavaScript for dynamic text effect
-
 const dynamicTextElement = document.getElementById("dynamic-text");
 const roles = [
   "I’m an aspiring AI / Machine Learning engineer",
@@ -46,7 +45,6 @@ function deleteText() {
     }
   }, 100); // Deleting speed
 }
-
 
 // Start typing the initial text
 typeText();
