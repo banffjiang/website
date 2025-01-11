@@ -29,7 +29,7 @@ header nav ul li {
 }
 
 .hero .content h1 {
-    color: #4CAF50;
+    color: #4CAF50; /* Primary text color */
 }
 
 .hero .content p {
@@ -38,7 +38,7 @@ header nav ul li {
 }
 
 .hero button {
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Button color */
     border: none;
     padding: 10px 20px;
     color: white;
@@ -50,6 +50,14 @@ header nav ul li {
 .hero .image img {
     width: 300px;
     border-radius: 50%;
+}
+
+/* Section Titles */
+section h2 {
+    font-size: 2.5rem; /* Larger font size */
+    color: #4CAF50; /* Matching the header text color */
+    text-transform: uppercase; /* Makes the text all caps */
+    margin-bottom: 20px;
 }
 
 /* Footer */
