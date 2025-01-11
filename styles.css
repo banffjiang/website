@@ -1,0 +1,69 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Header Navigation */
+  header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f0f0f0; /* Change to your preferred header color */
+    padding: 10px 0;
+  }
+  
+  header nav ul li {
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f9f7d9; /* Background color */
+  }
+  
+  .hero .content h1 {
+    color: #4CAF50; /* Primary text color */
+  }
+  
+  .hero .content p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  .hero button {
+    background-color: #4CAF50; /* Button color */
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .hero .image img {
+    width: 300px;
+    border-radius: 50%;
+  }
+  
+  /* Footer */
+  footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #f0f0f0; /* Footer background */
+  }
+  
+  footer .social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+  }
+  
