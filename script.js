@@ -1,6 +1,5 @@
 // JavaScript for dynamic text effect
 
-console.log('Script loaded');
 const dynamicTextElement = document.getElementById("dynamic-text");
 const roles = [
   "I’m an aspiring AI / Machine Learning engineer",

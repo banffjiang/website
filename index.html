@@ -11,32 +11,52 @@
   <header>
     <nav>
       <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Experience</li>
-        <li>Projects</li>
-        <li>Contact</li>
+        <li><a href="#home">Home</a></li> <!-- Internal link to the Home section -->
+        <li><a href="#about">About</a></li> <!-- Internal link to the About section -->
+        <li><a href="#experience">Experience</a></li> <!-- Internal link to the Experience section -->
+        <li><a href="#projects">Projects</a></li> <!-- External link to the Projects page -->
+        <li><a href="#contact">Contact</a></li> <!-- External link to the Contact page -->
       </ul>
     </nav>
   </header>
   
   <main>
-    <section class="hero">
+    <section id="home" class="hero"> <!-- Added id="home" for internal linking -->
       <div class="content">
         <h1 id="dynamic-text">I’m an aspiring AI / Machine Learning engineer</h1>
-        <p>Hi! I’m Banff, a third year data science student at the University of California, San Diego. I’m passionate about [Your Interests].</p>
+        <p>Hi! I’m Banff, a third-year data science student at the University of California, San Diego. I’m passionate about [Your Interests].</p>
         <button>Download CV</button>
       </div>
       <div class="image">
         <img src="your-image.jpg" alt="Your Photo">
       </div>
     </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>This section will contain information about me.</p>
+    </section>
+
+    <section id="experience">
+      <h2>My Experience</h2>
+      <p>This section will showcase my work experience.</p>
+    </section>
+
+    <section id="projects">
+      <h2>My Projects</h2>
+      <p>This section will showcase my projects.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>This section will contain my contact information.</p>
+    </section>
   </main>
   
   <footer>
     <div class="social-icons">
-      <a href="#">LinkedIn</a>
-      <a href="#">GitHub</a>
+      <a href="https://www.linkedin.com">LinkedIn</a> <!-- External link to LinkedIn -->
+      <a href="https://github.com">GitHub</a> <!-- External link to GitHub -->
     </div>
   </footer>
 </body>
