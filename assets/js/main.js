@@ -1,117 +1,109 @@
-/*
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
-(function($) {
-
-	var $window = $(window),
-		$body = $('body'),
-		$header = $('#header'),
-		$footer = $('#footer'),
-		$main = $('#main'),
-		settings = {
-
-			// Parallax background effect?
-				parallax: true,
-
-			// Parallax factor (lower = more intense, higher = less intense).
-				parallaxFactor: 20
-
-		};
-
-	// Breakpoints.
-		breakpoints({
-			xlarge:  [ '1281px',  '1800px' ],
-			large:   [ '981px',   '1280px' ],
-			medium:  [ '737px',   '980px'  ],
-			small:   [ '481px',   '736px'  ],
-			xsmall:  [ null,      '480px'  ],
-		});
-
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
-
-	// Touch?
-		if (browser.mobile) {
-
-			// Turn on touch mode.
-				$body.addClass('is-touch');
-
-			// Height fix (mostly for iOS).
-				window.setTimeout(function() {
-					$window.scrollTop($window.scrollTop() + 1);
-				}, 0);
-
-		}
-
-	// Footer.
-		breakpoints.on('<=medium', function() {
-			$footer.insertAfter($main);
-		});
-
-		breakpoints.on('>medium', function() {
-			$footer.appendTo($header);
-		});
-
-	// Header.
-
-		// Parallax background.
-
-			// Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
-				if (browser.name == 'ie'
-				||	browser.mobile)
-					settings.parallax = false;
-
-			if (settings.parallax) {
-
-				breakpoints.on('<=medium', function() {
-
-					$window.off('scroll.strata_parallax');
-					$header.css('background-position', '');
-
-				});
-
-				breakpoints.on('>medium', function() {
-
-					$header.css('background-position', 'left 0px');
-
-					$window.on('scroll.strata_parallax', function() {
-						$header.css('background-position', 'left ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
-					});
-
-				});
-
-				$window.on('load', function() {
-					$window.triggerHandler('scroll');
-				});
-
-			}
-
-	// Main Sections: Two.
-
-		// Lightbox gallery.
-			$window.on('load', function() {
-
-				$('#two').poptrox({
-					caption: function($a) { return $a.next('h3').text(); },
-					overlayColor: '#2c2c2c',
-					overlayOpacity: 0.85,
-					popupCloserText: '',
-					popupLoaderText: '',
-					selector: '.work-item a.image',
-					usePopupCaption: true,
-					usePopupDefaultStyling: false,
-					usePopupEasyClose: false,
-					usePopupNav: true,
-					windowMargin: (breakpoints.active('<=small') ? 0 : 50)
-				});
-
-			});
-
-})(jQuery);
+/* ----- NAVIGATION BAR FUNCTION ----- */
+function toggleMenu() {
+	const menu = document.getElementById("myNavMenu");
+	menu.classList.toggle("responsive");
+  }
+  
+  /* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
+  window.onscroll = addHeaderShadow;
+  
+  function addHeaderShadow() {
+	const header = document.getElementById("header");
+	const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
+  
+	if (scrollPosition > 50) {
+	  header.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
+	  header.style.height = "70px";
+	  header.style.lineHeight = "70px";
+	} else {
+	  header.style.boxShadow = "none";
+	  header.style.height = "90px";
+	  header.style.lineHeight = "90px";
+	}
+  }
+  
+  /* ----- TYPING EFFECT ----- */
+  new Typed(".typedText", {
+	strings: [
+	  "an aspiring software developer",
+	  "an aspiring ML engineer",
+	  "a student",
+	  "passionate about learning",
+	],
+	loop: true,
+	typeSpeed: 100,
+	backSpeed: 80,
+	backDelay: 2000,
+  });
+  
+  /* ----- SCROLL REVEAL ANIMATION ----- */
+  const scrollReveal = ScrollReveal({
+	origin: "top",
+	distance: "80px",
+	duration: 2000,
+	reset: true,
+  });
+  
+  // Home Section Animations
+  scrollReveal.reveal(".featured-text-card");
+  scrollReveal.reveal(".featured-name", { delay: 100 });
+  scrollReveal.reveal(".featured-text-info", { delay: 200 });
+  scrollReveal.reveal(".featured-text-btn", { delay: 200 });
+  scrollReveal.reveal(".social_icons", { delay: 200 });
+  scrollReveal.reveal(".featured-image", { delay: 300 });
+  scrollReveal.reveal(".gif-container", { delay: 200 });
+  
+  // Project Section Animation
+  scrollReveal.reveal(".project-box", { interval: 200 });
+  
+  // Headings Animation
+  scrollReveal.reveal(".top-header");
+  
+  /* ----- MODAL POPUP FUNCTIONALITY ----- */
+  function openPopup(box) {
+	const modal = document.getElementById("project-modal");
+	const title = box.getAttribute("data-title");
+	const description = box.getAttribute("data-description");
+	const link = box.getAttribute("data-link");
+  
+	document.getElementById("modal-title").textContent = title;
+	document.getElementById("modal-description").textContent = description;
+	document.getElementById("modal-link").href = link;
+  
+	modal.style.display = "block";
+  }
+  
+  // Close Modal Functionality
+  document.querySelector(".close").onclick = () => {
+	document.getElementById("project-modal").style.display = "none";
+  };
+  
+  window.onclick = (event) => {
+	const modal = document.getElementById("project-modal");
+	if (event.target === modal) {
+	  modal.style.display = "none";
+	}
+  };
+  
+  /* ----- CHANGE ACTIVE LINK ON SCROLL ----- */
+  const sections = document.querySelectorAll("section[id]");
+  
+  function updateActiveLink() {
+	const scrollY = window.scrollY;
+  
+	sections.forEach((section) => {
+	  const sectionHeight = section.offsetHeight;
+	  const sectionTop = section.offsetTop - 50;
+	  const sectionId = section.getAttribute("id");
+  
+	  const link = document.querySelector(`.nav-menu a[href*=${sectionId}]`);
+	  if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+		link.classList.add("active-link");
+	  } else {
+		link.classList.remove("active-link");
+	  }
+	});
+  }
+  
+  window.addEventListener("scroll", updateActiveLink);
+  
