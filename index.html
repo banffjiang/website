@@ -89,29 +89,229 @@
             <img src="assets/images/smiski_website.gif" alt="A fun GIF" />
         </div>
        <!-- -------------- ABOUT BOX ---------------- -->
-       <section class="section" id="about">
+        <section class="section" id="about">
           <div class="top-header">
             <h1>About Me</h1>
           </div>
           <div class="row">
             <div class="col">
                 <div class="about-info">
-                    <h3>Who am I?</h3>
+                    <h3>My Blurb</h3>
                     <p>I have a deep passion for problem-solving and creating ethical, secure software. In my previous roles, I developed AI/ML models and security solutions that helped build innovative platforms for thousands of users. I also dabble in full-stack development and security architecture. These experiences allowed me to transform complex ideas into reality while effectively communicating and collaborating across diverse teams and management levels. My commitment to continuous learning pushes me to develop both my technical and interpersonal skills.
+                        
+                        
                     </p>
                     <div class="about-btn">
-                        <a href="assets/images/[banff jiang] resume 2024.pdf" download class="btn download-btn">Download CV <i class="uil uil-import"></i></a>
+                        <a href="assets/images/[hailey pham] resume 2024.pdf" download class="btn download-btn">Download CV <i class="uil uil-import"></i></a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <!-- Skills Section -->
-                ...
+                <div class="skills-box">
+                    <div class="skills-header">
+                        <h3>Languages/Scripts</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>Java</span>
+                        <span>Python</span>
+                        <span>C/C++</span>
+                        <span>SQL</span>
+                        <span>R</span>
+                        <span>HTML/CSS</span>
+                        <span>Javascript</span>
+                        <span>Typescript</span>
+                    </div>
+                </div>
+                
+                <div class="skills-box">
+                    <div class="skills-header">
+                        <h3>Frameworks/Libraries</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>React</span>
+                        <span>Vue</span>
+                        <span>Next.js</span>
+                        <span>Node.js</span>
+                        <span>Flask</span>
+                        <span>WordPress</span>
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                        <span>Seaborn</span>
+                        <span>Matplotlib</span>
+                        <span>Three.js</span>
+                        <span>Vitest</span>
+                        <span>Vite</span>
+
+                    </div>
+                </div>
+                <div class="skills-box">
+                    <div class="skills-header">
+                        <h3>Developer Tools</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>Git</span>
+                        <span>IntelliJ IDEA</span>
+                        <span>VS Code</span>
+                        <span>Jupyter</span>
+                        <span>GitHub</span>
+                        <span>JIRA</span>
+                        <span>MySQL</span>
+                        <span>AWS</span>
+                        <span>Figma</span>
+                        <span>Adobe Creative Cloud</span>
+                        <span>Procreate</span>
+                        <span>UI/UX</span>
+
+                    </div>
+                </div>
             </div>
           </div>
        </section>
-       <!-- Other Sections -->
+       <section class="section" id="experience">
+        <div class="top-header">
+            <h1>Experience</h1>
+        </div>
+        <div class="timeline-section">
+            <div class="timeline-list">
+                <div class="timeline-item">
+                    <h3>AI/Machine Learning Engineer Intern</h3>
+                    <span>NASA | June 2024 - Present</span>
+                    <p>skills: React, Vite, Storybook, ML, NLP, LLM, llama3, Python</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Project Leader / Software Developer</h3>
+                    <span>DebaterHub | July 2024 - Present</span>
+                    <p>skills: Vue, Three.js</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Cyber Security Intern</h3>
+                    <span>Bank of America | May 2023 - August 2023</span>
+                    <p>skills: ML, Python, R, Pandas, NLP</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Computer Science Instructor</h3>
+                    <span>UC Berkeley ANova | Spring 2023 - Present</span>
+                    <p>skills: Python, HTML/CSS, JavaScript, Teaching, Mentorship</p>
+                </div>
+            </div>
+        </div>
+     </section>
+
+
+
+       <!-- -------------- PROJECT BOX ---------------- -->
+       <section class="section" id="projects">
+        <div class="top-header">
+            <h1>Projects</h1>
+        </div>
+        <div class="project-container">
+            <div class="project-box" data-title="Planet Exploration" data-description="Three.js simulation of the solar system" data-link="https://github.com/haileyphham/planet-exploration" onclick="openPopup(this)">
+                <div class="project-image">
+                    <img src="assets/images/planet.png" alt="avatar">
+                </div>
+                <h3>Planet Exploration</h3>
+                <label>Three.js simulation of the solar system</label>
+            </div>
+    
+            <div class="project-box" data-title="Phi Sigma Rho Website" data-description="Web application using React.js and Vite" data-link="https://github.com/haileyphham/websitephirho" onclick="openPopup(this)">
+                <div class="project-image">
+                    <img src="assets/images/phirho.png" alt="avatar">
+                </div>
+                <h3>Phi Sigma Rho Website</h3>
+                <label>Web application using React.js and Vite</label>
+            </div>
+    
+            <div class="project-box" data-title="Prescription Tracker App" data-description="Mobile app in React Native that tracks medication" data-link="https://github.com/haileyphham/prescription-tracker-app" onclick="openPopup(this)">
+                <div class="project-image">
+                    <img src="assets/images/pill-tracker.png" alt="avatar">
+                </div>
+                <h3>Prescription Tracker App</h3>
+                <label>Mobile app in React Native that tracks medication</label>
+            </div>
+        </div>
+        
+        <div id="project-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modal-title">Project Title</h2>
+                <p id="modal-description">Project description goes here.</p>
+                <a id="modal-link" href="#" target="_blank">View Project</a>
+            </div>
+        </div>
+    </section>
+    
+
+       <!-- -------------- CONTACT BOX ---------------- -->
+
+       <section class="section" id="contact">
+          <div class="top-header">
+            <h1>Get in touch</h1>
+            <span>Feel free to reach out to me about any inquires or opportunities</span>
+          </div>
+          <div class="row">
+             <div class="col">
+                <div class="contact-info">
+                    <h2>Contact Me <i class="uil uil-corner-right-down"></i></h2>
+                    <p><i class="uil uil-envelope"></i> Email: bxjiang@ucsd.edu</p>
+                    <p><i class="uil uil-phone"></i> Tel: ((408)-439-2988)</p>
+                </div>
+             </div>
+             <img src="assets/images/work.png" alt="work simiski" class="contact-image">
+          </div>
+       </section>
+
     </main>
-   </div>
+
+
+    <!-- --------------- FOOTER --------------- -->
+    <footer>
+        <div class="top-footer">
+            <p>Banff Jiang</p>
+        </div>
+        <div class="middle-footer">
+            <ul class="footer-menu">
+                <li class="footer_menu_list">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#about">About</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#experience">Experience</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#projects">Projects</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="social_icons">
+            <a href="https://www.linkedin.com/in/banffjiang" target="_blank" class="icon">
+                <i class="uil uil-linkedin-alt"></i>
+            </a>
+            <a href="https://github.com/banffjiang" target="_blank" class="icon">
+                <i class="uil uil-github-alt"></i>
+            </a>
+        </div>
+        <div class="bottom-footer">
+            <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Banff Jiang</a> - All rights reserved</p>
+        </div>
+    </footer>
+
+    </div>
+
+
+
+
+    <!-- ----- TYPING JS Link ----- -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+       <!-- ----- SCROLL REVEAL JS Link----- -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ----- MAIN JS ----- -->
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
