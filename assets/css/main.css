@@ -1,26 +1,26 @@
 
-/* ----- POPPINS FONT Link ----- */
+/* ----- raleway or lora ----- */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap');
 
-/* ----- VARIABLES ----- */
+
 
 :root {
-    --body-color: #4F772D; /* Updated light green for the background */
-    --color-white: #ECF39E; /* Light gray for text and highlights */
+    --body-color: #4F772D; 
+    --color-white: #ECF39E; 
 
-    --text-color-second: #010901; /* Softer light gray for secondary text */
-    --text-color-third: #90A955; /* Muted gray for tertiary text */
+    --text-color-second: #010901; 
+    --text-color-third: #90A955; 
 
-    --first-color: #4caf50; /* Vibrant green for primary elements */
-    --first-color-hover: #66bb6a; /* Slightly lighter green for hover effect */
+    --first-color: #4caf50; 
+    --first-color-hover: #66bb6a; 
 
-	--second-color: #31572C; /* Soft Green for secondary accents */
-    --third-color: #4F772D; /* Olive Green for tertiary accents */
-    --first-shadow-color: rgba(0, 0, 0, 0.3); /* Soft black shadow for subtle depth */
+	--second-color: #31572C; 
+    --third-color: #4F772D; 
+    --first-shadow-color: rgba(0, 0, 0, 0.3); 
 }
 
 
-/* ----- BASE ----- */
+/* ----- base ----- */
 *{
     margin: 0;
     padding: 0;
@@ -34,7 +34,7 @@ html{
 }
 
 
-/* ----- GLOBAL BUTTON DESIGN ----- */
+/* ----- button ----- */
 .btn{
     font-weight: 500;
     padding: 12px 20px;
@@ -49,15 +49,15 @@ html{
 }
 .btn:hover{
     background: linear-gradient(145deg, #31572c, #ecf39e);
-    color: var(--color-white);
+    color: var(#ffffff);
 }
 
-/* ----- GLOBAL ICONS DESIGN ----- */
+/* ----- icon----- */
 i{
     font-size: 18px;
 }
 
-/* ------- BASE -------- */
+/* ------- base -------- */
 body{
     background: var(--body-color);
 }
@@ -66,7 +66,7 @@ body{
     position: relative;
 }
 
-/* ----- NAV BAR ----- */
+/* ----- nav bar ----- */
 nav{
     position: fixed;
     display: flex;
@@ -84,7 +84,7 @@ nav{
    position: relative;
 }
 .nav-name{
-    font-size: 35px;
+    font-size: 38px;
     font-weight: 600;
     color: #d4f092;
 }
@@ -178,7 +178,7 @@ nav{
     background: var(--third-color);
     color: var(--color-white);
     padding: 3px 8px;
-    font-size: 12px;
+    font-size: 15px;
     border-radius: 5px;
 }
 .featured-name{
@@ -192,7 +192,7 @@ nav{
     color: var(--text-color-third);
 }
 .featured-text-info{
-    font-size: 15px;
+    font-size: 18px;
     margin-bottom: 30px;
     color: var(--text-color-second);
 }
@@ -313,7 +313,7 @@ nav{
     color: linear-gradient(145deg, #31572c, #ecf39e);
 }
 h3{
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
     color: var(--text-color-second);
     margin-bottom: 15px;
@@ -355,7 +355,7 @@ h3{
 }
 .about-info p{
     text-align: center;
-    font-size: 15px;
+    font-size: 18px;
     color: var(--text-color-second);
 }
 
@@ -711,7 +711,7 @@ h3{
 .contact-info:hover h2,
 .contact-info:hover p,
 .contact-info:hover i {
-    color: var(--color-white);
+    color: var(--text-color-second);
     z-index: 2;
 }
 
