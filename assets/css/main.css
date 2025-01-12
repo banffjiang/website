@@ -25,7 +25,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -38,7 +38,7 @@ html{
 .btn{
     font-weight: 500;
     padding: 12px 20px;
-    background: #C1B09A;
+    background: #f7e7d3;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -54,7 +54,7 @@ html{
 
 /* ----- GLOBAL ICONS DESIGN ----- */
 i{
-    font-size: 16px;
+    font-size: 18px;
 }
 
 /* ------- BASE -------- */
@@ -66,7 +66,7 @@ body{
     position: relative;
 }
 
-/* ----- NAVIGATION BAR ----- */
+/* ----- NAV BAR ----- */
 nav{
     position: fixed;
     display: flex;
@@ -84,15 +84,15 @@ nav{
    position: relative;
 }
 .nav-name{
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 600;
-    color: #94C45C;
+    color: #d4f092;
 }
 .nav-logo span{
     position: absolute;
     top: -15px;
     right: -20px;
-    font-size: 5em;
+    font-size: 6em;
     color: var(--text-color-second);
 }
 .nav-menu, .nav_menu_list{
@@ -335,6 +335,12 @@ h3{
 }
 
 /* ----- ABOUT INFO ----- */
+
+.container {
+    max-width: 1200px; /* Set a maximum width for the content */
+    margin: 0 auto;    /* Center the container horizontally */
+    padding: 0 50px;   /* Add some horizontal padding for spacing */
+}
 .about-info{
     position: relative;
     display: flex;
@@ -353,33 +359,18 @@ h3{
     color: var(--text-color-second);
 }
 
-/* ----- ABOUT / SKILLS BOX ----- */
-.skills-box{
-    margin: 10px;
-}
-.skills-header{
-    margin-bottom: 30px;
-}
-.skills-list{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-}
-.skills-list span{
-    font-size: 14px;
-    background: var(--color-white);
-    color: var(--text-color-second);
-    padding: 2px 10px;
-    border-radius: 5px;
-}
 
 /* ----- EXPERIENCE CARD CONTAINER ----- */
-.experience-cards-container {
+.experience-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Space out the cards evenly */
-    gap: 1000px; /* Add space between the cards */
-    margin: 40px 0; /* Add margin for top and bottom */
+    flex-direction: column; /* Stack cards vertically */
+    justify-content: center; /* Center the cards horizontally */
+    align-items: center; /* Center the cards vertically if needed */
+    gap: 20px; /* Reduced gap between the stacked cards */
+    margin-top: -350px; /* Reduced margin at the top to bring cards closer to the header */
+    margin-bottom: -400px; /* Keep the bottom margin if you want spacing from the section's bottom */
+    min-height: 100vh; /* Ensure full viewport height for vertical centering */
+    text-align: center; /* Center-align the content within cards */
 }
 
 /* ----- EXPERIENCE CARD ----- */
@@ -388,7 +379,8 @@ h3{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 45%; /* Adjust width for better positioning */
+    width: 100%; /* Cards take full width */
+    max-width: 800px; /* Set max width for each card */
     background: linear-gradient(145deg, #31572c, #ecf39e); /* Gradient background */
     color: var(--text-color-second);
     padding: 25px;
@@ -398,11 +390,12 @@ h3{
     overflow: hidden; /* Prevent content overflow on hover */
 }
 
+
 /* ----- HOVER EFFECT ON EXPERIENCE CARDS ----- */
 .experience-card:hover {
     transform: translateY(-12px); /* Slight lift effect */
     box-shadow: 2px 8px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow for hover effect */
-    background: linear-gradient(145deg, #495057, #e9ecef); /* Change gradient color on hover */
+    background: linear-gradient(145deg, #31572c, #ecf39e); /* Change gradient color on hover */
 }
 
 /* ----- EXPERIENCE CARD TITLE ----- */
@@ -445,6 +438,27 @@ h3{
 /* ----- HOVER EFFECT ON ICONS ----- */
 .experience-card:hover .icon {
     opacity: 1; /* Make icon fully visible on hover */
+}
+
+
+/* ----- ABOUT / SKILLS BOX ----- */
+.skills-box{
+    margin: 10px;
+}
+.skills-header{
+    margin-bottom: 30px;
+}
+.skills-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.skills-list span{
+    font-size: 18px;
+    background: var(--color-white);
+    color: var(--text-color-second);
+    padding: 2px 10px;
+    border-radius: 5px;
 }
 
 
