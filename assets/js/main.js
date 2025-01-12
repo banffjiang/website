@@ -25,14 +25,14 @@ function toggleMenu() {
   /* ----- TYPING EFFECT ----- */
   new Typed(".typedText", {
 	strings: [
-	  "an aspiring software developer",
-	  "an aspiring ML engineer",
-	  "a student",
-	  "passionate about learning",
+	  "I'm an undergraduate student",
+	  "I'm an aspiring AI / Machine Learning engineer",
+	  "I'm an aspiring software engineer",
+	  "I'm a quick learner (I think)",
 	],
 	loop: true,
-	typeSpeed: 100,
-	backSpeed: 80,
+	typeSpeed: 93,
+	backSpeed: 70,
 	backDelay: 2000,
   });
   

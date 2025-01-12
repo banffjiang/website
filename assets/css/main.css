@@ -3,21 +3,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
 
 /* ----- VARIABLES ----- */
-:root {
-    --body-color: #2d2d2d; /* Dark gray for background */
-    --color-white: #eaeaea; /* Light gray for text and highlights */
 
-    --text-color-second: #d4d4d4; /* Softer light gray for secondary text */
-    --text-color-third: #a8a8a8; /* Muted gray for tertiary text */
+:root {
+    --body-color: #4F772D; /* Updated light green for the background */
+    --color-white: #ECF39E; /* Light gray for text and highlights */
+
+    --text-color-second: #010901; /* Softer light gray for secondary text */
+    --text-color-third: #90A955; /* Muted gray for tertiary text */
 
     --first-color: #4caf50; /* Vibrant green for primary elements */
     --first-color-hover: #66bb6a; /* Slightly lighter green for hover effect */
 
-    --second-color: #42a5f5; /* Bright blue for secondary accents */
-    --third-color: #ffa726; /* Warm orange for tertiary accents */
+	--second-color: #31572C; /* Soft Green for secondary accents */
+    --third-color: #4F772D; /* Olive Green for tertiary accents */
     --first-shadow-color: rgba(0, 0, 0, 0.3); /* Soft black shadow for subtle depth */
 }
-
 
 
 /* ----- BASE ----- */
@@ -341,18 +341,18 @@ h3{
 }
 
 .gif-container {
-    text-align: right; /* Center the GIF */
-    margin: -500px 400px 20px ; /* Move it higher, adjust as needed */
+    text-align: right; 
+    margin: -500px 400px 20px ; 
     position: absolute;
     z-index: 99;
 
 }
 
 .gif-container img {
-    max-width: 60%; /* Ensure it fits the container */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 60%; 
+    height: auto;
     z-index: 99;
-    /*transform: scaleX(-1); /* Mirror the image horizontally */
+ 
 }
 
 /* ----- ABOUT INFO ----- */
@@ -405,70 +405,80 @@ h3{
     border-radius: 5px;
 }
 
-/* ----- TIMELINE SECTION ----- */
-.timeline-section {
-    position: relative;
-    padding: 5em 0; /* Adjusted padding */
-}
-
-.timeline-section::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: -15px;
-    width: 3px; /* Line width */
-    background: var(--text-color-third);
-    transform: translateX(-50%);
-}
-
-/* ----- EXPERIENCE LIST ----- */
-.timeline-list {
+/* ----- EXPERIENCE CARD CONTAINER ----- */
+.experience-cards-container {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Space out the cards evenly */
+    gap: 1000px; /* Add space between the cards */
+    margin: 40px 0; /* Add margin for top and bottom */
 }
 
-/* ----- TIMELINE ITEM ----- */
-.timeline-item {
+/* ----- EXPERIENCE CARD ----- */
+.experience-card {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items to the start */
-    width: 45%; /* Adjust width for boxes */
-    background: var(--first-color);
+    align-items: flex-start;
+    width: 45%; /* Adjust width for better positioning */
+    background: linear-gradient(145deg, #6a11cb, #2575fc); /* Gradient background */
     color: var(--color-white);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 2px 6px 15px rgba(0, 0, 0, 0.15); /* Softer shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Smooth transition */
+    overflow: hidden; /* Prevent content overflow on hover */
 }
 
-.timeline-item::after {
-    content: none;
-    position: absolute;
-    right: -15px; /* Position dot on the right side */
-    top: 20px; /* Center the dot vertically */
-    width: 10px; /* Dot size */
-    height: 10px; /* Dot size */
-    background: var(--text-color-third);
-    border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+/* ----- HOVER EFFECT ON EXPERIENCE CARDS ----- */
+.experience-card:hover {
+    transform: translateY(-12px); /* Slight lift effect */
+    box-shadow: 2px 8px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow for hover effect */
+    background: linear-gradient(145deg, #ff5f6d, #ffc3a0); /* Change gradient color on hover */
 }
 
-/* Adjust item position based on order */
-.timeline-item:nth-child(odd) {
-    align-self: flex-start; /* Left side */
+/* ----- EXPERIENCE CARD TITLE ----- */
+.experience-card .title {
+    font-size: 20px; /* Larger title for emphasis */
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 15px;
+    text-transform: uppercase; /* Make the title stand out */
 }
 
-.timeline-item:nth-child(even) {
-    align-self: flex-end; /* Right side */
+/* ----- EXPERIENCE CARD CONTENT ----- */
+.experience-card .content {
+    font-size: 14px;
+    color: var(--color-white);
+    line-height: 1.5;
+    opacity: 0.85; /* Slight opacity for more visual depth */
 }
 
-.timeline-date {
-    font-size: 12px;
+/* ----- EXPERIENCE CARD DATE ----- */
+.experience-card .date {
+    font-size: 13px;
     color: var(--text-color-third);
     margin-top: auto;
+    text-align: right;
+    font-style: italic; /* Italicize date for a subtle effect */
 }
+
+/* ----- ICONS AND INTERACTIVE ELEMENTS ----- */
+.experience-card .icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: var(--color-white);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+/* ----- HOVER EFFECT ON ICONS ----- */
+.experience-card:hover .icon {
+    opacity: 1; /* Make icon fully visible on hover */
+}
+
 
 
 /* ----- PROJECTS BOX ----- */
@@ -748,17 +758,22 @@ footer{
     .social_icons{
         margin-top: 2em;
     }
-    .featured-image{
-        order: 1;
-        justify-content: center;
-        min-height: 150px;
-        width: 100%;
-        margin-top: 65px;
-    }
-    .image, .image img{
-        width: 150px;
-        height: 150px;
-    }
+    .featured-image {
+		order: 1;
+		justify-content: center;
+		min-height: 150px;
+		width: 100%;
+		margin-top: 65px;
+		border-radius: 15px; /* Adjust the value for rounded corners */
+		object-fit: cover; /* Ensures the image covers the area without distortion */
+	}
+	
+	.featured-image .image img {
+		width: 100%;  /* Make the image fill the container width */
+		height: auto; /* Maintain the aspect ratio */
+		object-fit: cover; /* Optional, ensures the image covers the container while maintaining aspect ratio */
+		border-radius: 0; /* Removes circular border-radius on the image itself */
+	}
     .row{
         display: flex;
         flex-direction: column;
