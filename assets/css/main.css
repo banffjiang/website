@@ -1,6 +1,6 @@
 
 /* ----- POPPINS FONT Link ----- */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap');
 
 /* ----- VARIABLES ----- */
 
@@ -25,7 +25,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 
@@ -649,7 +649,7 @@ h3{
 
 .top-header span {
     font-size: 1.2em;
-    color: #6c757d;
+    color: var(--color-white);
 }
 
 .contact-container {
@@ -764,7 +764,7 @@ footer{
 }
 
 
-/* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
+
 @media only screen and (max-width: 1024px){
     .featured-text{
         padding: 0;
@@ -858,7 +858,7 @@ footer{
 
 }
 
-/* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
+
 
 @media only screen and (max-width: 540px){
     .featured-name{
