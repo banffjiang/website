@@ -33,24 +33,6 @@ html{
     scroll-behavior: smooth;
 }
 
-/* ----- CHANGE THE SCROLL BAR DESIGN ----- */
-::-webkit-scrollbar{
-    width: 10px;
-    border-radius: 25px;
-}
-::-webkit-scrollbar-track{
-    background: #f1f1f1;
-}
-::-webkit-scrollbar-thumb{
-    background: #ccc;
-    border-radius: 30px;
-}
-::-webkit-scrollbar-thumb:hover{
-    background: #bbb;
-}
-
-
-/* ---##-- REUSABLE CSS --##--- */
 
 /* ----- GLOBAL BUTTON DESIGN ----- */
 .btn{
@@ -160,7 +142,7 @@ nav{
     font-weight: 500; /* Match the button font-weight */
     padding: 12px 20px; /* Match the button padding */
     border-radius: 10px; /* Match the button border radius */
-    background: #C1B09A; /* Background color */
+    background: #FFFDD1; /* Background color */
     transition: color 0.4s; /* Smooth transition */
 }
 
@@ -248,7 +230,7 @@ nav{
     border-radius: 50%;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
     cursor: pointer;
-    color: #94C45C;
+    color: #FFFDD1;
 }
 .icon:hover{
     color: var(--first-color);
@@ -320,7 +302,7 @@ nav{
     width: 50%;
 }
 
-/* -- ## --- RESUABLE CSS -- ## -- */
+
 .top-header{
     text-align: center;
     margin-bottom: 5em;
@@ -421,7 +403,7 @@ h3{
     flex-direction: column;
     align-items: flex-start;
     width: 45%; /* Adjust width for better positioning */
-    background: linear-gradient(145deg, #6a11cb, #2575fc); /* Gradient background */
+    background: linear-gradient(145deg, #31572c, #ecf39e); /* Gradient background */
     color: var(--color-white);
     padding: 25px;
     border-radius: 15px; /* More rounded corners */
@@ -434,7 +416,7 @@ h3{
 .experience-card:hover {
     transform: translateY(-12px); /* Slight lift effect */
     box-shadow: 2px 8px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow for hover effect */
-    background: linear-gradient(145deg, #ff5f6d, #ffc3a0); /* Change gradient color on hover */
+    background: linear-gradient(145deg, #495057, #e9ecef); /* Change gradient color on hover */
 }
 
 /* ----- EXPERIENCE CARD TITLE ----- */
