@@ -447,6 +447,8 @@ h3{
 /* ----- ABOUT / SKILLS BOX ----- */
 .skills-box{
     margin: 10px;
+    z-index: 5;
+    position: relative
 }
 .skills-header{
     margin-bottom: 30px;
