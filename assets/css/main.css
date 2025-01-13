@@ -373,7 +373,7 @@ h3{
     gap: 20px; /* Reduced gap between the stacked cards */
     padding-top: 100px; /* Added padding to ensure top content doesn't get blocked */
     margin-top: -280px; /* Reset margin to avoid overlap issues */
-    margin-bottom: -100px; /* Keep the bottom margin if you want spacing from the section's bottom */
+    margin-bottom: -200px; /* Keep the bottom margin if you want spacing from the section's bottom */
     min-height: 100vh; /* Ensure full viewport height for vertical centering */
     text-align: center; /* Center-align the content within cards */
 }
