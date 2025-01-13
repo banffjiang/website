@@ -26,7 +26,7 @@ function toggleMenu() {
   new Typed(".typedText", {
 	strings: [
 	  "I'm an undergraduate student",
-	  "I'm an aspiring AI / Machine Learning engineer",
+	  "I'm an aspiring AI / ML engineer",
 	  "I'm an aspiring software engineer",
 	  "I'm a fast learner (I think)",
 	],
