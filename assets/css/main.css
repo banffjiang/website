@@ -83,10 +83,13 @@ nav{
 .nav-logo{
    position: relative;
 }
-.nav-name{
+.nav-name {
     font-size: 38px;
     font-weight: 600;
     color: #d4f092;
+    text-align: left; /* Ensures text alignment if the parent container allows */
+    left: 0; /* Pushes the element to the left edge of its containing block */
+    margin-left: 10px; /* Optional: Adds some spacing from the left edge */
 }
 .nav-logo span{
     position: absolute;
