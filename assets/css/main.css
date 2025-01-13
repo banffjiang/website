@@ -342,6 +342,7 @@ h3{
 .container {
     max-width: 1200px; /* Set a maximum width for the content */
     margin: 0 auto;    /* Center the container horizontally */
+    margin-bottom: 200px;
     padding: 0 50px;   /* Add some horizontal padding for spacing */
 }
 .about-info{
@@ -371,8 +372,8 @@ h3{
     align-items: center; /* Center the cards vertically if needed */
     gap: 20px; /* Reduced gap between the stacked cards */
     padding-top: 100px; /* Added padding to ensure top content doesn't get blocked */
-    margin-top: 0; /* Reset margin to avoid overlap issues */
-    margin-bottom: -400px; /* Keep the bottom margin if you want spacing from the section's bottom */
+    margin-top: -200px; /* Reset margin to avoid overlap issues */
+    margin-bottom: -100px; /* Keep the bottom margin if you want spacing from the section's bottom */
     min-height: 100vh; /* Ensure full viewport height for vertical centering */
     text-align: center; /* Center-align the content within cards */
 }
