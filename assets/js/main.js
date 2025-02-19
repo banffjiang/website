@@ -1,10 +1,8 @@
-/* ----- NAVIGATION BAR FUNCTION ----- */
 function toggleMenu() {
 	const menu = document.getElementById("myNavMenu");
 	menu.classList.toggle("responsive");
   }
   
-  /* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
   window.onscroll = addHeaderShadow;
   
   function addHeaderShadow() {
@@ -22,7 +20,6 @@ function toggleMenu() {
 	}
   }
   
-  /* ----- TYPING EFFECT ----- */
   new Typed(".typedText", {
 	strings: [
 	  "I'm an undergraduate student",
@@ -35,21 +32,52 @@ function toggleMenu() {
 	backSpeed: 70,
 	backDelay: 1500,
   });
+
+  function updateLink() {
+	const scrollY = window.scrollY;
   
-  /* ----- scroll ani----- */
+	sections.forEach((section) => {
+	  const sectionHeight = section.offsetHeight;
+	  const sectionTop = section.offsetTop - 50; 
+	  const sectionId = section.getAttribute("id");
+  
+	  const link = document.querySelector(`.nav-menu a[href*=${sectionId}]`);
+	  if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+		link.classList.add("active-link");
+	  } else {
+		link.classList.remove("active-link");
+	  }
+	});
+  }
+  
+  window.addEventListener("scroll", updateLink);
+  
   const scrollReveal = ScrollReveal({
-	origin: "top",       // Keeping the origin as "top" for most elements
+	origin: "top",       
 	distance: "70px",    
 	duration: 1500,      
 	easing: "ease-in-out",
-	reset: true,         // Reset the animation after it's completed, so it can trigger again on scroll
+	reset: true,         
   });
+
+  function openPopup(b) {
+	const modal = document.getElementById("project-modal");
+	const title = b.getAttribute("data-title");
+	const description = b.getAttribute("data-description");
+	const link = b.getAttribute("data-link");
+  	document.getElementById("modal-title").textContent = title;
+	document.getElementById("modal-description").textContent = description;
+	document.getElementById("modal-link").href = link;
+  	modal.classList.add("modal-visible");
+	modal.classList.remove("modal-hidden");
+  }
+
   
 
   scrollReveal.reveal(".featured-text-card", {
-	delay: 200,            // Slight delay to stagger 
+	delay: 200,           
 	distance: "80px",     
-	duration: 1200,        // Slower reveal for better effect
+	duration: 1200,       
   });
   scrollReveal.reveal(".featured-name", { 
 	delay: 300, 
@@ -83,52 +111,31 @@ function toggleMenu() {
 	duration: 1300 
   });
   
-  // Project Section Animation with interval for multiple elements
   scrollReveal.reveal(".project-box", {
 	interval: 200,        
-	delay: 200,            // Adds a slight delay for each element
-	distance: "80px",      // A more subtle distance for a smooth reveal
+	delay: 200,            
+	distance: "80px",      
 	duration: 1000,        
 	easing: "ease-out",   
   });
   
   scrollReveal.reveal(".top-header", {
 	delay: 300,           
-	distance: "60px",      // Smaller distance for headings
+	distance: "60px",     
 	duration: 1000,        
 	easing: "ease-in-out"  
   });
   
   
-  /* ----- modal----- */
-// Function to Open Modal
-function openPopup(box) {
-	const modal = document.getElementById("project-modal");
-	const title = box.getAttribute("data-title");
-	const description = box.getAttribute("data-description");
-	const link = box.getAttribute("data-link");
-  
-	// Set modal content dynamically
-	document.getElementById("modal-title").textContent = title;
-	document.getElementById("modal-description").textContent = description;
-	document.getElementById("modal-link").href = link;
-  
-	// Show modal with fade-in effect
-	modal.classList.add("modal-visible");
-	modal.classList.remove("modal-hidden");
-  }
-  
-  // Close Modal Functionality
-  function closeModal() {
+function closeModal() {
 	const modal = document.getElementById("project-modal");
 	modal.classList.add("modal-hidden");
 	modal.classList.remove("modal-visible");
   }
+
+
+	document.querySelector(".close").addEventListener("click", closeModal);
   
-  // Event listener to close modal when clicking the close button
-  document.querySelector(".close").addEventListener("click", closeModal);
-  
-  // Event listener to close modal when clicking outside the modal
   window.addEventListener("click", (event) => {
 	const modal = document.getElementById("project-modal");
 	if (event.target === modal) {
@@ -136,33 +143,16 @@ function openPopup(box) {
 	}
   });
   
-  // Event listener to close modal when pressing the "Esc" key
   window.addEventListener("keydown", (event) => {
 	if (event.key === "Escape") {
 	  closeModal();
 	}
   });
   
-  // ----- CHANGE ACTIVE LINK ON SCROLL ----- 
   const sections = document.querySelectorAll("section[id]");
   
-  function updateActiveLink() {
-	const scrollY = window.scrollY;
+
   
-	sections.forEach((section) => {
-	  const sectionHeight = section.offsetHeight;
-	  const sectionTop = section.offsetTop - 50; // Optional offset for better active link positioning
-	  const sectionId = section.getAttribute("id");
-  
-	  const link = document.querySelector(`.nav-menu a[href*=${sectionId}]`);
-	  if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-		link.classList.add("active-link");
-	  } else {
-		link.classList.remove("active-link");
-	  }
-	});
-  }
-  
-  window.addEventListener("scroll", updateActiveLink);
+  window.addEventListener("scroll", updateLink);
   
   
