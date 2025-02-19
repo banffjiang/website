@@ -20,7 +20,7 @@
 }
 
 
-/* ----- base ----- */
+
 *{
     margin: 0;
     padding: 0;
@@ -34,7 +34,7 @@ html{
 }
 
 
-/* ----- button ----- */
+
 .btn{
     font-weight: 500;
     padding: 12px 20px;
@@ -52,12 +52,11 @@ html{
     color: var(#ffffff);
 }
 
-/* ----- icon----- */
+
 i{
     font-size: 18px;
 }
 
-/* ------- base -------- */
 body{
     background: var(--body-color);
 }
@@ -66,7 +65,6 @@ body{
     position: relative;
 }
 
-/* ----- nav bar ----- */
 nav{
     position: fixed;
     display: flex;
@@ -87,9 +85,9 @@ nav{
     font-size: 38px;
     font-weight: 600;
     color: #d4f092;
-    text-align: left; /* Ensures text alignment if the parent container allows */
-    left: 0; /* Pushes the element to the left edge of its containing block */
-    margin-left: 10px; /* Optional: Adds some spacing from the left edge */
+    text-align: left; 
+    left: 0; 
+    margin-left: 10px; 
 }
 .nav-logo span{
     position: absolute;
@@ -140,25 +138,25 @@ nav{
 }
 
 .download-btn {
-    text-decoration: none; /* Remove underline */
-    color: var(--text-color-second); /* Dark brown color */
-    font-weight: 500; /* Match the button font-weight */
-    padding: 12px 20px; /* Match the button padding */
-    border-radius: 10px; /* Match the button border radius */
-    background: #FFFDD1; /* Background color */
-    transition: color 0.4s; /* Smooth transition */
+    text-decoration: none; 
+    color: var(--text-color-second); 
+    font-weight: 500; 
+    padding: 12px 20px; 
+    border-radius: 10px; 
+    background: #FFFDD1; 
+    transition: color 0.4s; 
 }
 
 .download-btn:hover {
-    color: var(--color-white); /* Change color on hover */
+    color: var(--color-white); 
 }
 
-/* ----- WRAPPER DESIGN ----- */
+
 .wrapper{
     padding-inline: 10vw;
 }
 
-/* ----- FEATURED BOX ----- */
+
 .featured-box{
     position: relative;
     display: flex;
@@ -166,7 +164,7 @@ nav{
     min-height: 700px;
 }
 
-/* ----- FEATURED TEXT BOX ----- */
+
 .featured-text{
     position: relative;
     display: flex;
@@ -177,6 +175,7 @@ nav{
     width: 50%;
     padding-left: 20px;
 }
+
 .featured-text-card span{
     background: var(--third-color);
     color: var(--color-white);
@@ -211,12 +210,12 @@ nav{
     background: linear-gradient(145deg, #31572c, #ecf39e);
 }
 .featured-text-btn a {
-    text-decoration: none; /* Remove underline */
-    color: var(--text-color-second); /* Dark brown color */
+    text-decoration: none; 
+    color: var(--text-color-second); 
 }
 
 .featured-text-btn a:hover {
-    color: var(--color-white); /* Change color on hover */
+    color: var(--color-white); 
 }
 .social_icons{
     display: flex;
@@ -340,18 +339,18 @@ h3{
 /* ----- ABOUT INFO ----- */
 
 .container {
-    max-width: 1200px; /* Set a maximum width for the content */
-    margin: 0 auto;    /* Center the container horizontally */
+    max-width: 1200px; 
+    margin: 0 auto;    
     margin-bottom: 200px;
-    padding: 0 50px;   /* Add some horizontal padding for spacing */
+    padding: 0 50px;   
 }
 .about-info {
     position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-block: 40px 90px; /* Increased padding for more height */
-    padding-inline: 40px; /* Increased horizontal padding */
+    padding-block: 40px 90px; 
+    padding-inline: 40px; 
     width: 100%;
     background: linear-gradient(145deg, #31572c, #ecf39e);
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
@@ -395,18 +394,16 @@ h3{
     border-radius: 15px; /* More rounded corners */
     box-shadow: 2px 6px 15px rgba(0, 0, 0, 0.15); /* Softer shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Smooth transition */
-    overflow: hidden; /* Prevent content overflow on hover */
+    overflow: hidden; 
 }
 
 
-/* ----- HOVER EFFECT ON EXPERIENCE CARDS ----- */
 .experience-card:hover {
     transform: translateY(-12px); /* Slight lift effect */
     box-shadow: 2px 8px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow for hover effect */
     background: linear-gradient(145deg, #31572c, #ecf39e); /* Change gradient color on hover */
 }
 
-/* ----- EXPERIENCE CARD TITLE ----- */
 .experience-card .title {
     font-size: 20px; /* Larger title for emphasis */
     font-weight: 700;
@@ -415,24 +412,21 @@ h3{
     text-transform: uppercase; /* Make the title stand out */
 }
 
-/* ----- EXPERIENCE CARD CONTENT ----- */
 .experience-card .content {
     font-size: 14px;
     color: var(--text-color-second);
     line-height: 1.5;
-    opacity: 0.85; /* Slight opacity for more visual depth */
+    opacity: 0.85; 
 }
 
-/* ----- EXPERIENCE CARD DATE ----- */
 .experience-card .date {
     font-size: 13px;
     color: var(--text-color-second);
     margin-top: auto;
     text-align: right;
-    font-style: italic; /* Italicize date for a subtle effect */
+    font-style: italic; 
 }
 
-/* ----- ICONS AND INTERACTIVE ELEMENTS ----- */
 .experience-card .icon {
     position: absolute;
     top: 20px;
@@ -443,13 +437,11 @@ h3{
     transition: opacity 0.3s ease;
 }
 
-/* ----- HOVER EFFECT ON ICONS ----- */
 .experience-card:hover .icon {
-    opacity: 1; /* Make icon fully visible on hover */
+    opacity: 1; 
 }
 
 
-/* ----- ABOUT / SKILLS BOX ----- */
 .skills-box{
     margin: 10px;
     z-index: 5;
@@ -516,43 +508,39 @@ h3{
     color: #7a6e5f;
 }
 
-/* Overlay sliding left to right */
 .project-box::after {
     content: "";
     position: absolute;
-    left: -100%; /* Start off-screen from the left */
+    left: -100%; 
     background: linear-gradient(145deg, #31572c, #ecf39e);
     width: 100%;
     height: 100%;
-    transition: left 0.4s ease-in-out; /* Smooth transition for sliding */
+    transition: left 0.4s ease-in-out; 
     z-index: 1;
 }
 
-/* Scale project box on hover */
 .project-box:hover {
     transform: scale(1.05); /* Slightly scale up on hover */
 }
 
-/* On hover: Slide the overlay from left to right */
 .project-box:hover::after {
     left: 0; /* Bring overlay to the full width */
 }
 
-/* Change text color on hover and bring text above the overlay */
 .project-box:hover h3,
 .project-box:hover label {
     color: var(--text-color-second);
     z-index: 2; /* Bring text above the overlay */
 }
 
-/* Ensure the image remains visible */
+
 .project-box:hover .project-image img {
     opacity: 1; /* Keep the image fully visible */
     transition: opacity 0.3s ease; /* Optional: smooth transition */
 }
 
 
-/* Modal Background */
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -567,13 +555,13 @@ h3{
     transition: opacity 0.3s ease-in-out; /* Smooth fade-in */
 }
 
-/* When modal is visible */
+
 .modal.modal-visible {
     display: block;
     opacity: 1;
 }
 
-/* Modal Content */
+
 .modal-content {
     background-color: var(--first-color);
     margin: 15% auto; /* Centered vertically and horizontally */
@@ -588,27 +576,26 @@ h3{
     transform: translateY(-20px); /* Initial off-screen position for a slide-up effect */
 }
 
-/* When modal content is visible */
+
 .modal.modal-visible .modal-content {
     opacity: 1;
-    transform: translateY(0); /* Slide into place */
+    transform: translateY(0);
 }
 
-/* Title Styling */
+
 #modal-title {
     color: #f0e5c7;
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
-/* Description Styling */
 #modal-description {
     color: #f0e5c7;
     font-size: 1em;
     margin-bottom: 15px;
 }
 
-/* Link Styling */
+
 #modal-link {
     color: #4b5d2a;
     text-decoration: none;
@@ -618,10 +605,10 @@ h3{
 
 #modal-link:hover {
     text-decoration: underline;
-    color: #365e02; /* Change link color on hover */
+    color: #365e02; 
 }
 
-/* Close Button Styling */
+
 .close {
     color: var(--first-color-hover);
     font-size: 28px;
@@ -640,13 +627,12 @@ h3{
 }
 
 
-/* ----- CONTACT BOX ----- */
-/* Contact Section */
+
 #contact {
     padding: 40px 20px;
 }
 
-/* Contact Header */
+
 .top-header {
     text-align: center;
     margin-bottom: 30px;
@@ -669,7 +655,7 @@ h3{
     height: 100%;
 }
 
-/* Flexbox Layout for Contact Section */
+
 .row {
     display: flex;
     justify-content: center; /* Center the content horizontally */
@@ -678,7 +664,7 @@ h3{
     flex-direction: column; /* Stack items vertically */
 }
 
-/* Updated Contact Info Style */
+
 .contact-info {
     position: relative;
     display: flex;
@@ -697,13 +683,13 @@ h3{
     text-align: center;
 }
 
-/* Heading Styling */
+
 .contact-info > h2 {
     color: var(--text-color-second);
     margin-bottom: 20px;
 }
 
-/* Paragraph Styling */
+
 .contact-info > p {
     display: flex;
     align-items: center;
@@ -712,12 +698,10 @@ h3{
     margin-block: 5px;
 }
 
-/* Icon Styling */
 .contact-info p > i {
     font-size: 26px;
 }
 
-/* Hover Effects */
 .contact-info:hover h2,
 .contact-info:hover p,
 .contact-info:hover i {
@@ -725,9 +709,8 @@ h3{
     z-index: 2;
 }
 
-/* Remove Contact Image */
 .contact-image {
-    display: none; /* Hide the image as per the updated requirement */
+    display: none; 
 }
 
 
